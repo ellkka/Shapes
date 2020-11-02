@@ -7,15 +7,13 @@ public class Square implements Shape {
         this.side = side;
     }
 
-    public Square() {
-
-    }
-
-    public double getArea(double side){
+    @Override
+    public double getArea(){
         return side*side;
     }
 
-    public double getPerimeter(double side){
+    @Override
+    public double getPerimeter(){
         return side*4;
     }
 

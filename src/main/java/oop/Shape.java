@@ -2,8 +2,8 @@ package oop;
 
  interface Shape {
 
-   public abstract double getArea(double side);
-   public abstract  double getPerimeter(double side);
+   public abstract double getArea();
+   public abstract  double getPerimeter();
 
 }
 
