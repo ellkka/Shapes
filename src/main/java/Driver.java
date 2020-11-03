@@ -1,15 +1,12 @@
 import oop.*;
 
-import java.awt.Shape;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Driver {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        int option = 0;
+        int option;
 
         do {
             System.out.println("Choose a shape: \n1. Square \n2.Rhombus \n3.Equilateral triangle \n4.Exit ");
