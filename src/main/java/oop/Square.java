@@ -1,7 +1,10 @@
 package oop;
 
-public class Square implements Shape {
+import java.util.Scanner;
+
+public class Square implements FourSide, Colored {
     private double side;
+    private String color;
 
     public Square(double side){
         this.side = side;
@@ -17,5 +20,26 @@ public class Square implements Shape {
         return side*4;
     }
 
+    @Override
+    public double getColorPrice() {
+        return 0;
+    }
 
+    @Override
+    public double moneyForColorUsed() {
+        return getArea()*12;
+    }
+
+    @Override
+    public double getBigDiagonal() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter big diagonal:");
+        double bigDiagonal = s.nextInt();
+        return bigDiagonal;
+    }
+
+    @Override
+    public double getSmallDiagonal() {
+        return getBigDiagonal();
+    }
 }
