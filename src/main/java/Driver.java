@@ -8,14 +8,10 @@ public class Driver {
         Scanner input = new Scanner(System.in);
         int option;
 
-        System.out.println("Enter diagonals length of rhombus: ");
-        int side1 = input.nextInt();
-        int side2 = input.nextInt();
-        String color = input.nextLine();
-        Romb r = new Romb(side1, side2, color);
+        Romb r = new Romb(4,5, "red");
         System.out.println(r.getArea());
         System.out.println(r.getPerimeter());
-        System.out.println("Money for color will be: " + r.moneyForColorUsed());
+        System.out.println("Money for color will be: " + r.getColorPrice());
 
         /*do {
             System.out.println("Choose a shape: \n1. Square \n2.Rhombus \n3.Equilateral triangle \n4.Exit ");

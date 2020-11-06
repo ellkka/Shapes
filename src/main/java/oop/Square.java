@@ -26,11 +26,6 @@ public class Square implements FourSide, Colored {
     }
 
     @Override
-    public double moneyForColorUsed() {
-        return getArea()*12;
-    }
-
-    @Override
     public double getBigDiagonal() {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter big diagonal:");

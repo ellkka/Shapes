@@ -7,6 +7,7 @@ public class Romb implements FourSide, Colored {
     private double diagonal1;
     private double diagonal2;
     private String color;
+    Scanner s = new Scanner(System.in);
 
     public Romb(double diagonal1, double diagonal2, String color) {
         this.diagonal1 = diagonal1;
@@ -33,7 +34,6 @@ public class Romb implements FourSide, Colored {
 
     @Override
     public double getSmallDiagonal() {
-        Scanner s = new Scanner(System.in);
         System.out.println("Enter small diagonal:");
         double smallDiagonal = s.nextInt();
         return smallDiagonal;
@@ -43,15 +43,10 @@ public class Romb implements FourSide, Colored {
     public double getColorPrice() {
         double price = 0;
         if (color == "red") price = 20;
-        if (color == "blue") price = 12;
-        if (color == "yellow") price = 25;
+        else if (color == "blue") price = 12;
+        else if (color == "yellow") price = 25;
         else System.out.println("Color is not available");
-        return price;
-    }
-
-    @Override
-    public double moneyForColorUsed() {
-        return getArea()*getColorPrice(); //20 money for 1m^2 color(as example)
+        return getArea() * price;
     }
 
 }
